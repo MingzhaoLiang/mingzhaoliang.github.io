@@ -1,0 +1,48 @@
+.home {
+    position: relative;
+    z-index: 10;
+
+    height: 100vh;
+    width: 80%;
+    min-height: 50rem;
+    max-width: 100rem;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.25s ease-in-out;
+}
+
+.heading {
+    text-align: center;
+    margin: 1rem;
+    font-size: var(--font-size-h1-display);
+    font-family: var(--font-family-heading);
+    padding: 1.25rem 0;
+    color: var(--colour-text-primary);
+}
+
+.subheading {
+    font-size: var(--font-size-caption);
+    text-align: center;
+    text-wrap: balance;
+    margin: 1rem;
+    font-family: var(--font-family-caption);
+    padding: 1.25rem 0;
+    color: var(--colour-text-primary);
+}
+
+@media (max-width: 640px) {
+    .home {
+        min-height: 30rem;
+    }
+
+    .heading,
+    .subheading {
+        padding: .5rem 0;
+        margin: 0.8rem;
+    }
+}

@@ -1,0 +1,16 @@
+.title {
+    white-space: pre-wrap;
+    text-align: center;
+    color: var(--colour-text-primary);
+    font-size: var(--font-size-h1);
+    font-family: var(--font-family-title);
+
+    padding: 1rem 0;
+    margin: 0 auto 3rem;
+}
+
+@media (max-width: 480px) {
+    .title {
+        margin: 0 auto 2rem;
+    }
+}

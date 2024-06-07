@@ -1,0 +1,39 @@
+.title {
+    white-space: pre-wrap;
+    font-size: var(--font-size-h3);
+    font-family: var(--font-family-title);
+    color: var(--colour-text-card-tertiary);
+
+    width: 80%;
+}
+
+.title-text {
+    display: inline;
+    background-image: var(--colour-background-highlight-primary);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+}
+
+.hover {
+    background-size: 100% 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.content {
+    display: flex;
+    justify-content: right;
+    color: var(--colour-text-card-tertiary);
+}
+
+.description {
+    max-height: 100%;
+    width: 85%;
+    padding: 1.5rem 0 0;
+
+    font-size: var(--font-size-body);
+    font-family: var(--font-family-body);
+    text-align: end;
+    line-height: 1.8;
+    text-wrap: balance;
+    letter-spacing: 0.025rem;
+}

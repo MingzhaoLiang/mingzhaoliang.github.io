@@ -1,0 +1,111 @@
+.container {
+    border-radius: 2rem;
+    background-color: var(--colour-background-card-tertiary);
+    backdrop-filter: blur(20px);
+
+    max-width: 70rem;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    margin: 0 auto 9rem;
+    justify-content: center;
+}
+
+.profile {
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+
+    grid-column: span 5;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    grid-column-start: span 10;
+    grid-column-end: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.25rem;
+
+    text-wrap: pretty;
+    text-align: justify;
+    white-space: pre-wrap;
+    overflow: scroll;
+    line-height: 1.7;
+    letter-spacing: 0.025rem;
+    font-size: var(--font-size-body);
+    /* font-size: clamp(1rem, 0.6rem + 0.8vw, 1.25rem); */
+    font-family: var(--font-family-body);
+    color: var(--colour-text-card-tertiary)
+}
+
+@media (max-width: 1280px) {
+    .container {
+        margin: 0 auto 8rem;
+    }
+
+    .profile {
+        grid-column: span 6;
+    }
+
+    .content {
+        grid-column-start: span 9;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 3rem 2.5rem;
+        margin: 0 auto 6rem;
+    }
+
+    .content {
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+        margin: 0 auto 4rem;
+    }
+
+    .profile {
+        max-height: 30rem;
+        border-radius: 5rem 5rem 0 0;
+        grid-column: span 16;
+    }
+
+    .content {
+        margin-top: 2rem;
+        grid-column-start: span 16;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .profile {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        margin: 2rem 2rem 0;
+        grid-column: span 16;
+
+        box-shadow: 0 0 30px 10px var(--colour-shadow-secondary) inset;
+    }
+
+    .profile img {
+        position: relative;
+        z-index: -1;
+    }
+}

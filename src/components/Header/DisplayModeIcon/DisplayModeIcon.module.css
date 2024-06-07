@@ -1,0 +1,17 @@
+.display-mode {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.icon {
+    cursor: pointer;
+    object-fit: fill;
+    filter: var(--filter-icon-primary);
+}
+
+.icon:hover {
+    filter: var(--filter-icon-primary-hover);
+}

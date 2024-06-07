@@ -1,0 +1,84 @@
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 0.5rem;
+    color: var(--colour-text-card);
+}
+
+.btn {
+    padding: 0.1rem 0.5rem;
+
+    font-size: var(--font-size-label);
+    font-family: var(--font-family-body);
+    font-weight: 200;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    color: var(--colour-text-card-secondary);
+
+    cursor: pointer;
+    background-color: transparent;
+
+    border: dashed;
+    border-width: 1px;
+    border-color: var(--colour-text-card-secondary);
+}
+
+.btn:hover {
+    color: var(--colour-label-secondary);
+    border: solid;
+    border-width: 1px;
+    border-color: var(--colour-label-secondary);
+}
+
+.btn--active {
+    color: #ffffff;
+    background-color: var(--colour-label-secondary);
+    border: solid;
+    border-width: 1px;
+    border-color: var(--colour-label-secondary);
+}
+
+.btn--active:hover {
+    color: #ffffff;
+    background-color: var(--colour-label-secondary-accent);
+    border: solid;
+    border-width: 1px;
+    border-color: var(--colour-label-secondary-accent);
+}
+
+.attachment {
+    overflow: auto;
+    color: var(--colour-text-card-secondary);
+    line-height: 1.5;
+}
+
+.bibtex {
+    padding: 1rem;
+    overflow: auto;
+    background-color: var(--colour-background-tertiary);
+    color: var(--colour-text-card-tertiary);
+    font-size: 0.9rem;
+}
+
+.abstract {
+    padding: 1rem;
+    border: dashed;
+    border-width: 1px;
+}
+
+.abstract p {
+    white-space: pre-wrap;
+    text-wrap: pretty;
+    text-align: justify;
+    letter-spacing: 0.025rem;
+    font-weight: 300;
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 1.15rem);
+}
+
+@media (max-width: 768px) {
+    .attachment {
+        max-height: 20rem;
+    }
+}

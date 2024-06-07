@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Lobster+Two&family=M+PLUS+Rounded+1c:wght@400&family=Lato&family=Quicksand:wght@400&family=Rubik+Moonrocks&family=Rowdies:wght@300&family=Salsa&display=swap");
+@import url("https://fonts.cdnfonts.com/css/mosk");
+
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overscroll-behavior: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+}
+
+.inactive {
+  transform: translateY(-1rem);
+  opacity: 0;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.transition-all-normal {
+  transition: all 0.25s ease-in-out;
+}
+
+:root {
+  --font-size-h1: clamp(3rem, 2rem + 4vw, 7rem);
+  --font-size-h2: clamp(1.5rem, 1rem + 1.8vw, 3rem);
+  --font-size-h3: clamp(1.25rem, 1.15rem + 0.8vw, 1.6rem);
+  --font-size-body: clamp(1rem, 0.9rem + 0.5vw, 1.35rem);
+  --font-size-link: clamp(1rem, 0.8rem + 0.4vw, 1.1rem);
+  --font-size-label: clamp(0.8rem, 0.7rem + 0.55vw, 1rem);
+  --font-size-caption: clamp(1rem, 0.8rem + 0.5vw, 1.5rem);
+
+  --font-size-h1-display: clamp(3rem, 2rem + 6vw, 13rem);
+  --font-size-h2-display: clamp(2.9rem, 2rem + 2vw, 5rem);
+
+  --font-family-heading: "Salsa", cursive;
+  --font-family-title: "Mosk", "Helvetica Neue", sans-serif;
+  --font-family-body: "Lato", "gt", sans-serif;
+  --font-family-caption: "Quicksand", "gt", sans-serif;
+}
+
+:root,
+:root .light {
+  --font-family-heading: "Salsa", cursive;
+  --gradient-background-light: linear-gradient(to bottom,
+      hsla(200, 100%, 90%, 0) 0%,
+      hsla(200, 100%, 90%, 0.35) 40%,
+      hsla(200, 100%, 90%, 0.5) 48%,
+      hsla(200, 100%, 90%, 0.6) 55%,
+      hsla(200, 100%, 90%, 0.7) 61%,
+      hsla(200, 100%, 90%, 0.8) 67%,
+      hsla(200, 100%, 90%, 0.85) 71%,
+      hsla(200, 100%, 90%, 0.9) 76%,
+      hsla(200, 100%, 90%, 0.93) 80%,
+      hsla(200, 100%, 90%, 0.95) 83%,
+      hsl(200, 100%, 90%) 90%);
+
+  --gradient-background-secondary: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 10px,
+      hsla(0, 0%, 0%, 0.05) 10px,
+      hsla(0, 0%, 0%, 0.05) 20px);
+
+  --colour-primary: hsl(200, 100%, 90%);
+
+  --colour-text-primary: hsl(180, 76%, 18%);
+  --colour-text-secondary: hsl(180, 76%, 38%);
+
+  --colour-background-highlight-primary: linear-gradient(transparent 50%,
+      hsl(146, 100%, 84%) 50%,
+      hsl(156, 99%, 73%) 90%,
+      transparent 90%);
+
+  --colour-text-card-primary: hsl(180, 76%, 15%);
+  --colour-text-card-secondary: hsl(180, 76%, 15%);
+  --colour-text-card-tertiary: hsl(180, 76%, 15%);
+
+  --colour-background-primary: hsla(45, 17%, 95%, 0.8);
+  --colour-background-secondary: hsla(0, 0%, 100%, 0.8);
+  --colour-background-tertiary: hsla(203, 100%, 91%, 0.8);
+
+  --colour-background-card-primary: hsla(0, 0%, 100%);
+  --colour-background-card-secondary: hsl(0, 0%, 100%, 0.5);
+  --colour-background-card-tertiary: hsla(0, 0%, 100%, 0.5);
+
+  --colour-label-primary: hsla(176, 99%, 73%, 0.6);
+  --colour-label-secondary: hsl(180, 85%, 25%);
+  --colour-label-secondary-accent: hsl(180, 85%, 15%);
+  --colour-label-tertiary: hsl(180, 85%, 15%);
+
+  --colour-shadow-primary: hsla(0, 0%, 0%, 0.1);
+  --colour-shadow-secondary: hsla(197, 93%, 95%, 0.8);
+
+  --filter-icon-primary: invert(19%) sepia(28%) saturate(1195%) hue-rotate(131deg) brightness(97%) contrast(95%);
+  --filter-icon-primary-hover: invert(25%) sepia(80%) saturate(4401%) hue-rotate(248deg) brightness(100%) contrast(106%);
+
+  --font-family-heading-dark: "Mosk", "Helvetica Neue", sans-serif;
+  --gradient-background-dark: linear-gradient(to bottom,
+      hsla(180, 76%, 5%, 0) 0%,
+      hsla(180, 76%, 5%, 0.35) 40%,
+      hsla(180, 76%, 5%, 0.5) 48%,
+      hsla(180, 76%, 5%, 0.6) 55%,
+      hsla(180, 76%, 5%, 0.7) 61%,
+      hsla(180, 76%, 5%, 0.8) 67%,
+      hsla(180, 76%, 5%, 0.85) 71%,
+      hsla(180, 76%, 5%, 0.9) 76%,
+      hsla(180, 76%, 5%, 0.93) 80%,
+      hsla(180, 76%, 5%, 0.953) 83%,
+      hsl(180, 76%, 5%) 93%);
+
+  --gradient-background-secondary-dark: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 10px,
+      hsla(180, 84%, 45%, 0.3) 10px,
+      hsla(180, 84%, 45%, 0.3) 20px);
+
+  --colour-primary-dark: hsl(180, 76%, 5%);
+
+  --colour-text-primary-dark: hsl(180, 100%, 95%);
+  --colour-text-secondary-dark: hsl(180, 100%, 80%);
+
+  --colour-background-highlight-primary-dark: linear-gradient(transparent 50%,
+      hsla(190, 100%, 63%, 0.5) 50%,
+      hsl(3, 100%, 75%) 65%,
+      hsl(3, 100%, 75%) 90%,
+      transparent 90%);
+
+  --colour-text-card-primary-dark: hsl(170, 32%, 85%);
+  --colour-text-card-secondary-dark: hsl(180, 62%, 92%);
+  --colour-text-card-tertiary-dark: hsl(174, 61%, 83%);
+
+  --colour-background-primary-dark: hsla(180, 75%, 5%, 0.8);
+  --colour-background-secondary-dark: hsla(180, 75%, 50%, 0.3);
+  --colour-background-tertiary-dark: hsla(180, 75%, 20%, 0.8);
+
+  --colour-background-card-primary-dark: hsla(194, 51%, 21%, 0.4);
+  --colour-background-card-secondary-dark: hsla(175, 60%, 17%, 0.6);
+  --colour-background-card-tertiary-dark: hsla(180, 65%, 35%, 0.1);
+
+  --colour-label-primary-dark: hsl(3, 100%, 75%);
+  --colour-label-secondary-dark: hsl(180, 85%, 30%);
+  --colour-label-secondary-accent-dark: hsl(180, 85%, 40%);
+  --colour-label-tertiary-dark: hsl(180, 85%, 40%);
+
+  --colour-shadow-primary-dark: hsla(0, 0%, 100%, 0.3);
+  --colour-shadow-secondary-dark: hsla(194, 89%, 7%, 0.8);
+
+  --filter-icon-primary-dark: invert(92%) sepia(6%) saturate(1009%) hue-rotate(169deg) brightness(106%) contrast(102%);
+  --filter-icon-primary-hover-dark: invert(97%) sepia(28%) saturate(5865%) hue-rotate(149deg) brightness(93%) contrast(99%);
+}
+
+:root .dark {
+  --font-family-heading: var(--font-family-heading-dark);
+  --gradient-background: var(--gradient-background-dark);
+  --gradient-background-secondary: var(--gradient-background-secondary-dark);
+
+  --colour-primary: var(--colour-primary-dark);
+
+  --colour-text-primary: var(--colour-text-primary-dark);
+  --colour-text-secondary: var(--colour-text-secondary-dark);
+
+  --colour-background-highlight-primary: var(--colour-background-highlight-primary-dark);
+
+  --colour-text-card-primary: var(--colour-text-card-primary-dark);
+  --colour-text-card-secondary: var(--colour-text-card-secondary-dark);
+  --colour-text-card-tertiary: var(--colour-text-card-tertiary-dark);
+
+  --colour-background-primary: var(--colour-background-primary-dark);
+  --colour-background-secondary: var(--colour-background-secondary-dark);
+  --colour-background-tertiary: var(--colour-background-tertiary-dark);
+
+  --colour-background-card-primary: var(--colour-background-card-primary-dark);
+  --colour-background-card-secondary: var(--colour-background-card-secondary-dark);
+  --colour-background-card-tertiary: var(--colour-background-card-tertiary-dark);
+
+  --colour-label-primary: var(--colour-label-primary-dark);
+  --colour-label-secondary: var(--colour-label-secondary-dark);
+  --colour-label-secondary-accent: var(--colour-label-secondary-accent-dark);
+  --colour-label-tertiary-dark: var(--colour-label-tertiary-dark);
+
+  --colour-shadow-primary: var(--colour-shadow-primary-dark);
+  --colour-shadow-secondary: var(--colour-shadow-secondary-dark);
+
+  --filter-icon-primary: var(--filter-icon-primary-dark);
+  --filter-icon-primary-hover: var(--filter-icon-primary-hover-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-family-heading: var(--font-family-heading-dark);
+    --gradient-background: var(--gradient-background-dark);
+    --gradient-background-secondary: var(--gradient-background-secondary-dark);
+    --colour-primary: var(--colour-primary-dark);
+
+    --colour-text-primary: var(--colour-text-primary-dark);
+    --colour-text-secondary: var(--colour-text-secondary-dark);
+
+    --colour-background-highlight-primary: var(--colour-background-highlight-primary-dark);
+
+    --colour-text-card-primary: var(--colour-text-card-primary-dark);
+    --colour-text-card-secondary: var(--colour-text-card-secondary-dark);
+    --colour-text-card-tertiary: var(--colour-text-card-tertiary-dark);
+
+    --colour-background-primary: var(--colour-background-primary-dark);
+    --colour-background-secondary: var(--colour-background-secondary-dark);
+    --colour-background-tertiary: var(--colour-background-tertiary-dark);
+
+    --colour-background-card-primary: var(--colour-background-card-primary-dark);
+    --colour-background-card-secondary: var(--colour-background-card-secondary-dark);
+    --colour-background-card-tertiary: var(--colour-background-card-tertiary-dark);
+
+    --colour-label-primary: var(--colour-label-primary-dark);
+    --colour-label-secondary: var(--colour-label-secondary-dark);
+    --colour-label-secondary-accent: var(--colour-label-secondary-accent-dark);
+    --colour-label-tertiary-dark: var(--colour-label-tertiary-dark);
+
+    --colour-shadow-primary: var(--colour-shadow-primary-dark);
+    --colour-shadow-secondary: var(--colour-shadow-secondary-dark);
+
+    --filter-icon-primary: var(--filter-icon-primary-dark);
+    --filter-icon-primary-hover: var(--filter-icon-primary-hover-dark);
+  }
+}

@@ -1,0 +1,31 @@
+.outlet {
+    width: 100vw;
+    position: relative;
+
+    min-height: 100vh;
+    max-width: 100rem;
+
+    margin: 0 auto;
+    padding: 7rem 8rem 6rem;
+
+    transition: padding 0.25s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .outlet {
+        padding: 7rem 6rem 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .outlet {
+        padding: 7rem 4rem 4rem;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .outlet {
+        padding: 7rem 2rem 2rem;
+    }
+}

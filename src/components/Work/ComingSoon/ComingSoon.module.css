@@ -1,0 +1,117 @@
+.default {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: var(--font-size-body);
+    font-family: var(--font-family-body);
+    align-self: self-start;
+
+    line-height: 1.8;
+    text-wrap: balance;
+
+    color: var(--colour-text-card-primary);
+}
+
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .3;
+    }
+}
+
+.default-block {
+    grid-column: span 4;
+}
+
+.default-block:hover {
+    transform: translateY(0rem);
+    box-shadow: 0px 0px 0px hsla(0, 0%, 0%, 0);
+    cursor: not-allowed;
+}
+
+.default-block>div>div::before,
+.default-block>div>div::after {
+    opacity: 0;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    z-index: 50;
+    left: 0;
+
+    background: var(--gradient-background-secondary);
+    transition: all .2s ease-in-out;
+}
+
+.default-block>div>div::before {
+    top: 0;
+
+    transform: translate3d(0, -10px, 0);
+    animation: transformRight 30s infinite linear;
+}
+
+.default-block>div>div::after {
+    bottom: 0;
+
+    transform: translate3d(0, 10px, 0);
+    animation: transformLeft 30s infinite linear;
+}
+
+.default-block>div>div:hover:before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.default-block>div>div:hover:after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes transformRight {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 164.75%;
+    }
+
+    100% {
+        width: 229.5%;
+    }
+}
+
+@keyframes transformLeft {
+    0% {
+        width: 229.5%;
+    }
+
+    50% {
+        width: 164.75%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .default-block {
+        grid-column: span 8;
+    }
+}
