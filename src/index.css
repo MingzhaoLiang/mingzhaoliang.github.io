@@ -46,7 +46,7 @@ a {
   --font-size-h1: clamp(3rem, 2rem + 4vw, 7rem);
   --font-size-h2: clamp(1.5rem, 1rem + 1.8vw, 3rem);
   --font-size-h3: clamp(1.25rem, 1.15rem + 0.8vw, 1.6rem);
-  --font-size-body: clamp(1rem, 0.9rem + 0.5vw, 1.35rem);
+  --font-size-body: clamp(1rem, 0.8rem + 0.5vw, 1.25rem);
   --font-size-link: clamp(1rem, 0.8rem + 0.4vw, 1.1rem);
   --font-size-label: clamp(0.8rem, 0.7rem + 0.55vw, 1rem);
   --font-size-caption: clamp(1rem, 0.8rem + 0.5vw, 1.5rem);

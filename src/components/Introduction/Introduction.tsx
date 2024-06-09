@@ -1,3 +1,4 @@
+import { LIANG2024 } from "@/utils/data";
 import classes from "./Introduction.module.css";
 
 export default function Introduction() {
@@ -8,16 +9,22 @@ export default function Introduction() {
 			</div>
 			<div className={classes.content}>
 				<p>
-					Hey there! 👋 After spending over a year delving into the world of data
-					analytics during internships, I've decided to pivot my career towards Front-end
-					Development. Formerly a research assistant at The University of Melbourne, my
-					work has been accepted by the MSR 2024 conference – a real pinch-me moment!
+					Hello, I'm Timothy, a Web Developer Intern at Ausmed Education. With over one
+					year of experience in the ICT field, I've honed my skills in developing website
+					features, crafting comprehensive documentation, and providing valuable
+					data-driven insights for informed decision-making. Formerly a research assistant
+					at the University of Melbourne, my work has been accepted by the{" "}
+					<a style={{ textDecoration: "underline" }} href={LIANG2024.publisherLink}>
+						MSR 2024 conference
+					</a>
+					.
 				</p>
 				<p>
-					From sleek designs to seamless journeys, I thrive on creating engaging
-					interfaces. Transitioning from crunching numbers to crafting code has been quite
-					the journey, but it's one I'm diving into headfirst with enthusiasm and a hunger
-					to learn.
+					I am deeply passionate about creating seamless and user-friendly web
+					applications that elevate user experiences and align with business objectives.
+					My goal is to ascend to the role of Senior Developer, where I leverage my
+					technical prowess and problem-solving abilities to drive impactful solutions and
+					foster innovation.
 				</p>
 			</div>
 		</div>

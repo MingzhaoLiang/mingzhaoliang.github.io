@@ -24,7 +24,7 @@ export const EXPERTISE = [
 			},
 		],
 		description:
-			"Passionate about UI/UX. Proficient in HTML, CSS, JavaScript, ReactJS, NextJS, and Angular.",
+			"Passionate about UI/UX. Proficient in HTML, CSS, JavaScript, TypeScript, React, NextJS, and Angular.",
 	},
 	{
 		id: "expertise-2",
@@ -110,7 +110,7 @@ export const WORKS = [
 		title: "Mapty",
 		description:
 			"An application that allows users to log their workouts and view their workout logs on a map.",
-		techStack: ["ReactJS", "TailwindCSS"],
+		techStack: ["React", "TailwindCSS"],
 		link: "https://mapty-timz.vercel.app/",
 		highlight: false,
 	},
@@ -142,7 +142,7 @@ export const LIANG2024 = {
 	html: "#",
 	pdf: "https://www.researchgate.net/publication/378711871_Curated_Email-Based_Code_Reviews_Datasets",
 	publisher: "MSR",
-	publisherLink: "https://2024.msrconf.org/track/msr-2024-data-and-tool-showcase-track?",
+	publisherLink: "https://2024.msrconf.org/",
 	title: "Curated Email-Based Code Reviews Datasets",
 	authors: [
 		{ name: "Mingzhao Liang", link: "/about" },
